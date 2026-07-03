@@ -40,14 +40,6 @@ python -m app.seed.seed
 - Password: `Demo@12345`
 - Role: `Owner`
 
-## المتغيرات البيئية
-
-انسخ `.env.example` إلى `.env`. لا تضع مفاتيح حقيقية في الكود. عند غياب `OPENAI_API_KEY` يعمل AI CFO بوضع mock. لاحقًا يمكن تفعيل OpenAI عبر:
-
-```env
-AI_PROVIDER=openai
-OPENAI_API_KEY=sk-...
-```
 
 ## هيكل المشروع
 
@@ -63,18 +55,3 @@ OPENAI_API_KEY=sk-...
 - Auth: Register/Login/Logout/Refresh/Current user architecture مع Demo mode.
 - Onboarding: 5 خطوات تنتهي بـ Financial DNA وHealth Score وRisk Profile.
 
-## API
-
-راجع `docs/api.md` أو افتح:
-
-```text
-http://localhost:8000/api/docs
-```
-
-## ما الجاهز للربط الحقيقي لاحقًا
-
-- ربط OpenAI/Gemini داخل `backend/app/ai/providers.py`.
-- استبدال mock seed بعمليات PostgreSQL كاملة.
-- إضافة Alembic migrations إنتاجية.
-- WebSocket streaming لـ AI CFO.
-- تخزين تقارير PDF/Excel حقيقية.
